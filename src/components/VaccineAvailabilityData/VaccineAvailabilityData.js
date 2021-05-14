@@ -97,7 +97,7 @@ class VaccineAvailabilityData extends Component {
           <Grid container spacing={4}>
             <Grid item xs={12} justify="center" alignItems="center">
               <Typography variant="h4" className={classes.headingText}>
-                View Vaccination status by Pin code
+                Vaccine Availability
               </Typography>
               <Typography
                 style={{

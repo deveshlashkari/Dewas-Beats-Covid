@@ -108,7 +108,15 @@ class About extends Component {
               <Typography variant="h3" className={classes.primaryTextColor}>
                 If you want to contribute
               </Typography>
-              <IconButton style={{ marginTop: "10px" }}>
+              <IconButton
+                style={{ marginTop: "10px" }}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/deveshlashkari/Dewas-Beats-Covid",
+                    "blank"
+                  )
+                }
+              >
                 <GitHubIcon className={classes.icon} />
               </IconButton>
             </Grid>

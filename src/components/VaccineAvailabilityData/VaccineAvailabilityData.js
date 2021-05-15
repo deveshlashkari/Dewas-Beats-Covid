@@ -6,6 +6,7 @@ import BootstrapTable from "react-bootstrap-table-next";
 
 import { getVaccineDataByPin } from "../../Services/API";
 import { DEWAS_PIN } from "../../Constants/Constants";
+import Moment from "react-moment";
 
 var moment = require("moment");
 
@@ -87,8 +88,6 @@ class VaccineAvailabilityData extends Component {
       text: "Age Group",
     },
   ];
-
-  data = [{ id: "1", name: "Hello", price: 200 }];
   render() {
     const { classes } = this.props;
     return (
@@ -97,7 +96,10 @@ class VaccineAvailabilityData extends Component {
           <Grid container spacing={4}>
             <Grid item xs={12} justify="center" alignItems="center">
               <Typography variant="h4" className={classes.headingText}>
-                Vaccine Availability
+                Vaccine Availability -{" "}
+                <Moment format="MMMM Do YYYY">
+                  {<span style={{ fontWeight: "bolder" }}>Date.now()</span>}
+                </Moment>
               </Typography>
               <Typography
                 style={{
@@ -107,7 +109,7 @@ class VaccineAvailabilityData extends Component {
                 }}
               >
                 NOTE:- This table will only show current date Data and
-                Availablity of the center. If no data is avaialable on COWIN
+                Availablity of the center. If no data is available on COWIN
                 website for the center it will not be visible here.
               </Typography>
             </Grid>

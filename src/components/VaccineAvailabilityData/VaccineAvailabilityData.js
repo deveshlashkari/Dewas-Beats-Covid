@@ -121,6 +121,15 @@ class VaccineAvailabilityData extends Component {
                 hover
                 condensed
                 headerClasses={classes.tableHeader}
+                noDataIndication={() => {
+                  return (
+                    <span style={{ textAlign: "center" }}>
+                      <Typography variant="h5" style={{ color: "#233e8b" }}>
+                        No Data Found
+                      </Typography>
+                    </span>
+                  );
+                }}
               />
             </Grid>
           </Grid>

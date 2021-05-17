@@ -87,6 +87,23 @@ class VaccineAvailabilityData extends Component {
       dataField: "minimumAge",
       text: "Age Group",
     },
+    {
+      dataField: "",
+      text: "Visit COWIN",
+      formatter: (cell, row) => {
+        return (
+          <Button
+            variant="outlined"
+            style={{ background: "#243F8B", color: "white", height: "30px" }}
+            onClick={() => {
+              window.open("https://selfregistration.cowin.gov.in/", "blank");
+            }}
+          >
+            Register
+          </Button>
+        );
+      },
+    },
   ];
   render() {
     const { classes } = this.props;
